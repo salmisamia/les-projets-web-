@@ -1,0 +1,155 @@
+/******************************************
+
+CSS : Renault SRC formulaire
+	: Mars 2010
+	: Équipe DFO IT
+
+******************************************/
+
+/* FORMULAIRE SRC */
+.formSrc fieldset{padding-top:0 !important;}
+.formSrc .blockFilledGrey{background-color:#F8F8F8 !important;}
+.formSrc select,.formSrc span.fld select,.formSrc input,.formSrc textarea{width:94%;}
+.formSrc .checkbox{width:12px;}
+.formSrc ul select,.formSrc ul input,.formSrc ul textarea,.formSrc .sizeKm{width:92%;}
+.formSrc label {display:block;padding-bottom:10px;}
+.formSrc #rightChoice1{min-height:520px;_height:510px;}
+.choiceBlock{zoom:1;position:relative;}
+
+	/* civilité, prénom, nom */
+.formSrc .nameInfo .sizeNameInfo {width:80px;}
+.formSrc .date input{width:30px;text-align:center;}
+.formSrc .vehiculeNum{width:30px;}
+.formSrc .vehiculeNum input{width:26px;}
+.formSrc .streetNumber{width:55px;}
+.formSrc .streetNumber input{width:50px;}
+/**/
+.formSrc .sizeAchat_renault li{margin-bottom:0;}
+.formSrc .sizeAchat_renault .skinnedCheck label,.formSrc .sizeAchat_renault .skinnedRadio label {height:7px;}
+.formSrc .rules li{list-style-type:disc;margin-left:13px;}
+.skinnedRadioActive label.checkedSkinned,.skinnedRadioActive label.notCheckedSkinned{_height:7px;_line-height:10px;_text-align:center;}
+	/*message erreur */
+.formSrc .errormsg{color:red;float:left;}
+.formSrc .date .errormsg{position:absolute;width:170px;}
+	/* upload files */
+.formSrc .supprimer{display:inline-block;padding-left:40px;cursor:pointer;background:url(../img/skin/skinnedForm/deleteYel.png) no-repeat right center;height:7px;width:7px;}
+.formSrc .newFile{padding:2px 0;}
+.formSrc .validate,.formSrc .groupCheckLeft input,.wAuto{width:auto !important;}
+.txtJ{text-align:justify;}
+.infos{color:#B5BABD;}
+.cursor{cursor:pointer;}
+
+/* **************** FORMULAIRES ******************** */
+/*home*/
+select#selectLinks{width: 96% !important;}
+/* champs par defaut */
+input.text{height:24px; padding-top:6px; border:1px solid #dadcde; color:#484848; font-size:12px; }
+span.fld select {height:30px; border:1px solid #dadcde; }
+span.fld select option{}
+input.check {}
+/* fieldset */
+fieldset {padding:10px;}
+.reducebottom {margin-bottom:-23px !important;} 
+fieldset h3 {font-size:1.1em; font-weight:bold;margin-bottom:10px;}
+/* ligne de formulaire */
+.error label {color: #ff0000;font-weight: bold;}
+.error input, .error span.text, .error select {border:1px solid #ff0000; background-color: #ffe5e5;}
+.fline, ul.fline li {overflow:hidden; _overflow:visible; zoom:1;}
+li.fline, ul.fline li, p.fline {margin-bottom:10px ;}
+.fline label {float:left; font-weight:normal; font-size:11px;}
+.fline input {vertical-align:middle;}
+/* groupe de checkboxes � gauche */
+.groupCheckLeft label {float:none; overflow:hidden; zoom:1; font-weight:normal; width:auto !important; display:block;}
+.groupCheckLeft input.check {float:left; margin-right:5px;//margin-top: -4px;}
+/* alignement du label */
+.labelLeft label {float:left;}
+.labelRight label {float:right;}
+.labelTop label {float:none; display:block;}
+
+/* conteneurs inputs */
+span.fld {display:block; overflow:hidden; _overflow:visible; zoom:1;} 
+span.fld select, span.fld textarea {width:auto; border:1px solid #dadcde;}/* un input text est contenu dans un span*/
+span.text input.text {border:0; vertical-align:middle; border:1px solid #dadcde;} 
+span.text textarea.text{width: 100%;border:0;padding:0;}
+span.fld textarea {border: none;}
+
+/* label sizes */
+.label10 label, label.label10 {width:10%;} .label20 label, label.label20 {width:20%;} .label30 label, label.label30 {width:30%;}
+.label40 label, label.label40 {width:40%;} .label50 label, label.label50 {width:50%;} .label60 label, label.label60 {width:60%;}
+.label70 label, label.label70 {width:70%;} .label80 label, label.label80 {width:80%;} .label90 label, label.label90 {width:90%;}
+.labelAuto label{width: auto;} 
+
+/* input sizes */ 
+.input10 {width:10% !important;} .input20 {width:20% !important;} .input30 {width:30% !important;} .input40 {width:40% !important;} 
+.input50 {width:50% !important;} .input60 {width:60% !important;} .input70 {width:70% !important;} .input80 {width:80% !important;}
+.input90 {width:90% !important;}
+.input10, .input20, .input30, .input40, .input50, .input60, .input70, .input80, .input90{ float:none!important;} 
+
+
+
+/* WebForms */
+.skinnedSelect .selectSkinned, .skinnedInput{display: block;height: 30px;line-height: 30px;padding: 0 0 0 0;}
+.skinnedSelect .selectSkinned .selected {display: block; color:#A2A5A4 !important; height: 30px;line-height: 30px; padding: 0px; border: 1px solid #D0CFCB;}
+.skinnedSelect .selectSkinned .clear {clear:both;}
+.skinnedSelect .selectSkinned .selectedOption {float:left;display: block;padding:0px;font-weight:normal;font-size:12px;color:#A2A5A4;padding: 0 10px 0 10px; line-height: 30px; vertical-align:middle;}
+.skinnedSelect .selectSkinned .dropDown {float: right;width: 21px;height: 30px;line-height: 30px;background:url(../img/skin/skinnedForm/dropdown.gif) no-repeat 0% 0%;}
+.skinnedSelect .selectSkinned .optionsContainer {position:absolute;display:none;border: 1px solid #D0CFCB;border-top: 0; z-index: 50000;}
+.skinnedSelect .selectSkinned .option {padding:0 10px 0 10px;height: 30px;line-height: 30px;background-color: #FFF;text-align:left;font-weight:normal;font-size:12px;color:#000000;border: 0 !important;}
+.skinnedSelect .selectSkinned .optionsContainer .selected{background-image: none;background:#f2f2f2;color:#000000 !important;}
+.skinnedSelect .selectSkinned .disabled {background: none;background-color:#FFF;color:#f2f2f2;}
+.skinnedSelect .selectSkinned{padding-right: 5%;}
+.skinnedInput{border: 1px solid #D0CFCB; color:#A2A5A4 !important; padding-left: 5%; width: 89%;}
+.skinnedCheck, .skinnedRadio{overflow: hidden; _overflow: visible; zoom: 1; position: relative; z-index: 30000;}
+.skinnedCheck{margin-bottom: 3px;}
+.skinnedCheck input, .skinnedRadio input{float: left;}
+.skinnedCheck label, .skinnedRadio label{ display: block; height: 17px; line-height: 17px; float: left; padding-left: 5px;}
+.skinnedCheckActive label, .skinnedRadioActive label{ padding-left: 23px;}
+.skinnedCheckActive input, .skinnedRadioActive input{position: absolute; left: -3000px;}
+.hiddenSelect select{visibility:hidden;position:absolute;left:-10000px;}
+.skinnedCheckActive label.notCheckedSkinned{background: url(../img/skin/skinnedForm/checkbox.gif) no-repeat left top;}
+.skinnedCheckActive label.checkedSkinned{background: url(../img/skin/skinnedForm/checkbox.gif) no-repeat left bottom;}
+.skinnedRadioActive label.notCheckedSkinned{background: url(../img/skin/skinnedForm/radio.gif) no-repeat left top;}
+.skinnedRadioActive label.checkedSkinned{background: url(../img/skin/skinnedForm/radio.gif) no-repeat left -798px !important;}
+.Nvalid{background-color:#e2e2e2;}
+
+
+
+/* Boutons  */
+/*.bouton {vertical-align:middle; display:-moz-inline-box; display:inline-block; color: #FFF !important;padding-right: 10px;  border:1px solid #FFF;  background:#a2a5a4 url(skin/btn/gradient_grey_btn.png) repeat-x left top; cursor:pointer;  font-weight:bold; }
+.bouton:hover,.boutonhover { background:#6c6f70 url(skin/btn/gradient_grey_hover_btn.png) repeat-x left top; cursor:pointer; }
+.bouton input{display:block; overflow:hidden; _overflow:visible; zoom:1; _width:1%;_white-space:nowrap; _padding-left:10px; text-transform:lowercase;  font-weight:bold; padding-left:32px;  height:30px; line-height:30px; background: url(skin/puce/boutonsChevronsGauche.png) no-repeat 9px center; cursor:pointer; }
+input.bouton {font-size:11px;font-family:Arial; background-color:#A2A5A4;border:none;  height:30px; line-height:30px; border:none;font:inherit;padding-right:20px;color:inherit;-moz-box-sizing:content-box;cursor:pointer;  text-align:left; margin-right:-10px;}
+.bouton input {background:none; border:0; padding:0; font-weight:bold;}*/
+
+
+
+.boutonUnivers {background:#f7b113 url(../img/skin/btn/gradient_univers_btn.png) repeat-x left top; cursor:pointer;}
+.boutonUnivers:hover {background:#f39c12 url(../img/skin/btn/gradient_univers_hover_btn.png) repeat-x left top;  cursor:pointer;} 
+.bouton input {display:block; overflow:hidden; _overflow:visible; zoom:1; _width:1%;_white-space:nowrap; _padding-left:10px; text-transform:lowercase;  font-weight:bold; padding-left:32px;  height:30px; line-height:30px; background: url(../img/skin/puce/boutonsChevronsGauche.png) no-repeat 9px center; cursor:pointer; }
+.bouton {color: #FFF !important; }
+.txtC{text-align:center !important;}
+
+.popMask {background: #ddd;position: absolute;z-index: 9000;top: 0;left: 0;overflow: hidden;padding: 0;}
+.popMask iframe {border: none;position: absolute;left: 0;top: 0;filter:alpha(opacity=0)}
+.popLayer {background: #fff;position: absolute;z-index: 9010;left: 0;top: 0;visibility: hidden;overflow: visible;}
+.actionButtons {overflow: hidden;_overflow: visible;zoom: 1;padding-top: 14px; padding-right: 12px;position: relative;z-index: 9011;}
+.actionButtons a {float:right;height:14px;overflow:hidden;margin-left:2px;text-decoration:none;}
+.actionButtons .closeBox {background: url(../img/skin/closeLayerImg.png) no-repeat center right;padding-right:25px;}
+
+.layerContent {display:none;}
+
+
+
+.formSrc{*width: 749px!important; *overflow: hidden!important;}
+.formSrc #rightChoice1,
+.formSrc #rightChoice2,
+.formSrc #leftChoice1,
+.formSrc #leftChoice2{
+	*width: 360px!important; *overflow: hidden!important; *position: static;
+}
+.formSrc #rightChoice1 .blockInside,
+.formSrc #rightChoice2 .blockInside,
+.formSrc #leftChoice1 .blockInside,
+.formSrc #leftChoice2 .blockInside{*position: static; }
+
+.formSrc textarea.textareaMaxed{*width: 94%;}

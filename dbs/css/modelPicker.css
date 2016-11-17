@@ -1,0 +1,83 @@
+/**
+ * 
+ * ModelPicker
+ * 
+ */
+
+/* General */ 
+html, body { overflow-x:hidden; }
+#modelPicker { background-color:#A2A5A4; clear:both;visibility:hidden;visibility:visible\9;*visibility:hidden;position:relative;}
+#modelPicker.started {visibility:visible;}
+#modelPicker ul { background:url(../img/modelpicker/css/skin/bg_n.png) repeat-x top left; overflow:hidden; _overflow:visible; _zoom:1; }
+#modelPicker li { display:block; float:left; }
+#modelPicker a { color:#fff; display:block; float:left; font-size:11px; font-weight:bold; height:20px; padding:10px; text-align:center; text-decoration:none; text-transform:uppercase; }
+#modelPicker a.twoLines { padding:4px 10px 16px; text-align:left; _padding-bottom:4px; }
+#modelPicker a span.roll { color:#000; display:none; }
+.invisible { visibility:hidden; }
+
+
+/* Niveau N */ 
+#modelPicker ul li {  }
+
+#modelPicker ul li a { border-right:1px solid #848685; border-left:1px solid #eae9e8; position:relative; }
+#modelPicker ul li.first a { border-left:none; border-right-color:#848685; }
+#modelPicker ul li.last a { border-right-color:#fff; }
+#modelPicker ul li a.current { border-right-color:#eae9e8; *position:relative; *z-index:800; }
+
+#modelPicker ul li a .pointer { display:none; z-index:999; }
+#modelPicker ul li a.current .pointer { background:url(../img/modelpicker/css/skin/mp_pointer.png) no-repeat left top; display:block; height:13px; position:absolute; width:7px; left:100%; top:13px; }
+
+
+/* Niveau N-1 */
+#modelPicker ul div { float:left; overflow:hidden; background:#D0CFCB url(../img/modelpicker/css/skin/bg_n-1.png) repeat-x top left; height:40px; width:100%; position:relative; *zoom:1;  }
+#modelPicker ul ul { background-image:none; float:left; _overflow:visible; _zoom:1; }
+#modelPicker ul ul li {  }
+#modelPicker ul ul li a { border-right:none; border-left:none; padding:10px 5px; font-weight:bold; }
+#modelPicker ul ul li.first { margin-left:10px; }
+#modelPicker ul ul li.first a { padding-left:10px; }
+#modelPicker ul ul li a:hover, #modelPicker ul ul li a:focus, #modelPicker ul ul li.current a { background-color:#ededed; color:#000; }
+#modelPicker ul ul li li a:hover, #modelPicker ul ul li.current li a { background:none; }
+
+/*
+#modelPicker ul ul li a:focus span, #modelPicker ul ul li a:hover span, 
+#modelPicker ul ul li.current a:focus span, #modelPicker ul ul li.current a:hover span { display:none; }
+#modelPicker ul ul li a:focus span.roll, #modelPicker ul ul li a:hover span.roll,
+#modelPicker ul ul li.current a:focus span.roll, #modelPicker ul ul li.current a:hover span.roll { display:block; }
+*/
+/* Niveau N-2 : Images */
+#modelPicker ul.sub_img { display:none; }
+
+/* Horizontal Scroll Handlers */
+#modelPicker ul li a.next, #modelPicker ul li a.prev { background:url(../img/modelpicker/css/skin/bg_next.png) repeat-y left top; border:none; display:block; height:30px; padding:11px 0 0; width:40px; position:absolute; top:0; _background-color:#adaca9; _height:29px; _width:30px; }
+#modelPicker ul li a.next { right:0; _background:url(../img/modelpicker/css/skin/bg_n-1.png) repeat-x left top; _right:-1px; }
+#modelPicker ul li a.prev { left:0; background-image:url(../img/modelpicker/css/skin/bg_prev.png); _background:url(../img/modelpicker/css/skin/bg_n-1.png) repeat-x left top; }
+
+#modelPicker .invisible { visibility:hidden !important; }
+
+/* rollCOntainer */
+#rollContainer { position:absolute; top:0; left:0; z-index:3; }
+
+#rollContainer ul.sub_img { background:#FFF url(../img/modelpicker/css/skin/bg_n-2.png) repeat-x left bottom; display:block; visibility:hidden; float:none; height:auto; width:180px; position:absolute; _z-index:100; }
+#rollContainer ul.sub_img li { background:none; display:block; float:left; clear:left; visibility:hidden; width:180px; }
+#rollContainer ul.sub_img li.last { padding-bottom:10px; _padding-bottom:9px; }
+#rollContainer ul.sub_img li a { display:block; color:#000; font-size:11px; font-weight:normal; text-transform:uppercase; text-decoration:none; margin:0 20px; /*_white-space:nowrap;*/ text-align: center;}
+#rollContainer ul.sub_img li a:hover {  }
+#rollContainer ul.sub_img li a img { display:block;  margin:0 auto; }
+
+#rollContainer ul.two_cols { width:340px; }
+#rollContainer ul.two_cols li.cut { position:absolute; left:160px; }
+#rollContainer ul.three_cols { width:500px; }
+#rollContainer ul.three_cols li.cut { position:absolute; left:160px; }
+#rollContainer ul.three_cols li.cut_2 { position:absolute; left:320px; }
+
+#rollContainer .invisible { visibility:hidden !important; }
+
+#iframeModelPicker {background:#ff0099; filter:alpha(opacity=0); height:0px;width:0px;left:0;top:0;z-index:0;position:absolute;}
+
+/* Cufon */
+#modelPicker .cufon-canvas { margin-top:4px; }
+#modelPicker .cufon-vml { margin-top:4px\9; }
+
+/* FIX WEBKIT */
+#modelPicker .wb_dnone { display:none !important; }
+

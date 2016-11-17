@@ -1,0 +1,701 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Simple News Class : Reference</title>
+
+<meta http-equiv='expires' content='-1' />
+<meta http-equiv= 'pragma' content='no-cache' />
+<meta name='robots' content='all' />
+<meta name='author' content='http://launchpad.net/~costales' />
+<meta name='description' content='Simplenews class reference for CodeIgniter' />
+
+<style type="text/css">
+    body {
+     margin: 0;
+     padding: 0;
+     font-family: Lucida Grande, Verdana, Geneva, Sans-serif;
+     font-size: 14px;
+     color: #333;
+     background-color: #fff;
+    }
+
+    a {
+     color: #0134c5;
+     background-color: transparent;
+     text-decoration: none;
+     font-weight: normal;
+     outline-style: none;
+    }
+    a:visited {
+     color: #0134c5;
+     background-color: transparent;
+     text-decoration: none;
+     outline-style: none;
+    }
+    a:hover {
+     color: #000;
+     text-decoration: none;
+     background-color: transparent;
+     outline-style: none;
+    }
+
+    #breadcrumb {
+     float: left;
+     background-color: transparent;
+     margin: 10px 0 0 42px;
+     padding: 0;
+     font-size: 10px;
+     color: #666;
+    }
+    #breadcrumb_right {
+     float: right;
+     width: 175px;
+     background-color: transparent;
+     padding: 8px 8px 3px 0;
+     text-align: right;
+     font-size: 10px;
+     color: #666;
+    }
+    #nav {
+     background-color: #494949;
+     margin: 0;
+     padding: 0;
+    }
+    #nav2 {
+     background: #fff url(images/nav_bg_darker.jpg) repeat-x left top;
+     padding: 0 310px 0 0;
+     margin: 0;
+     text-align: right;
+    }
+    #nav_inner {
+     background-color: transparent;
+     padding: 8px 12px 0 20px;
+     margin: 0;
+     font-family: Lucida Grande, Verdana, Geneva, Sans-serif;
+     font-size: 11px;
+    }
+
+    #nav_inner h3 {
+     font-size: 12px;
+     color: #fff;
+     margin: 0;
+     padding: 0;
+    }
+
+    #nav_inner .td_sep {
+     background: transparent url(images/nav_separator_darker.jpg) repeat-y left top;
+     width: 25%;
+     padding: 0 0 0 20px;
+    }
+    #nav_inner .td {
+     width: 25%;
+    }
+    #nav_inner p {
+     color: #eee;
+     background-color: transparent;
+     padding:0;
+     margin: 0 0 10px 0;
+    }
+    #nav_inner ul {
+     list-style-image: url(images/arrow.gif);
+     padding: 0 0 0 18px;
+     margin: 8px 0 12px 0;
+    }
+    #nav_inner li {
+     padding: 0;
+     margin: 0 0 4px 0;
+    }
+
+    #nav_inner a {
+     color: #eee;
+     background-color: transparent;
+     text-decoration: none;
+     font-weight: normal;
+     outline-style: none;
+    }
+
+    #nav_inner a:visited {
+     color: #eee;
+     background-color: transparent;
+     text-decoration: none;
+     outline-style: none;
+    }
+
+    #nav_inner a:hover {
+     color: #ccc;
+     text-decoration: none;
+     background-color: transparent;
+     outline-style: none;
+    }
+
+    #masthead {
+     margin: 0 40px 0 35px;
+     padding: 0 0 0 6px;
+     border-bottom: 1px solid #999;
+    }
+
+    #masthead h1 {
+    background-color: transparent;
+    color: #e13300;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0 0 6px 0;
+    }
+
+    #searchbox {
+     background-color: transparent;
+     padding: 6px 40px 0 0;
+     text-align: right;
+     font-size: 10px;
+     color: #666;
+    }
+
+    #img_welcome {
+     border-bottom: 1px solid #D0D0D0;
+     margin: 0 40px 0 40px;
+     padding: 0;
+     text-align: center;
+    }
+
+    #content {
+     margin: 20px 40px 0 40px;
+     padding: 0;
+    }
+
+    #content p {
+     margin: 12px 20px 12px 0;
+    }
+
+    #content h1 {
+    color: #e13300;
+    border-bottom: 1px solid #666;
+    background-color: transparent;
+    font-weight: normal;
+    font-size: 24px;
+    margin: 0 0 20px 0;
+    padding: 3px 0 7px 3px;
+    }
+
+    #content h2 {
+     background-color: transparent;
+     border-bottom: 1px solid #999;
+     color: #000;
+     font-size: 18px;
+     font-weight: bold;
+     margin: 28px 0 16px 0;
+     padding: 5px 0 6px 0;
+    }
+
+    #content h3 {
+     background-color: transparent;
+     color: #333;
+     font-size: 16px;
+     font-weight: bold;
+     margin: 16px 0 15px 0;
+     padding: 0 0 0 0;
+    }
+
+    #content h4 {
+     background-color: transparent;
+     color: #444;
+     font-size: 14px;
+     font-weight: bold;
+     margin: 22px 0 0 0;
+     padding: 0 0 0 0;
+    }
+
+    #content img {
+     margin: auto;
+     padding: 0;
+    }
+
+    #content code {
+     font-family: Monaco, Verdana, Sans-serif;
+     font-size: 12px;
+     background-color: #f9f9f9;
+     border: 1px solid #D0D0D0;
+     color: #002166;
+     display: block;
+     margin: 14px 0 14px 0;
+     padding: 12px 10px 12px 10px;
+    }
+
+    #content pre {
+     font-family: Monaco, Verdana, Sans-serif;
+     font-size: 12px;
+     background-color: #f9f9f9;
+     border: 1px solid #D0D0D0;
+     color: #002166;
+     display: block;
+     margin: 14px 0 14px 0;
+     padding: 12px 10px 12px 10px;
+    }
+
+    #content .path {
+     background-color: #EBF3EC;
+     border: 1px solid #99BC99;
+     color: #005702;
+     text-align: center;
+     margin: 0 0 14px 0;
+     padding: 5px 10px 5px 8px;
+    }
+
+    #content dfn {
+     font-family: Lucida Grande, Verdana, Geneva, Sans-serif;
+     color: #00620C;
+     font-weight: bold;
+     font-style: normal;
+    }
+    #content var {
+     font-family: Lucida Grande, Verdana, Geneva, Sans-serif;
+     color: #8F5B00;
+     font-weight: bold;
+     font-style: normal;
+    }
+    #content samp {
+     font-family: Lucida Grande, Verdana, Geneva, Sans-serif;
+     color: #480091;
+     font-weight: bold;
+     font-style: normal;
+    }
+    #content kbd {
+     font-family: Lucida Grande, Verdana, Geneva, Sans-serif;
+     color: #A70000;
+     font-weight: bold;
+     font-style: normal;
+    }
+
+    #content ul {
+     list-style-image: url(images/arrow.gif);
+     margin: 10px 0 12px 0;
+    }
+
+    li.reactor {
+     list-style-image: url(images/reactor-bullet.png);
+    }
+    #content li {
+     margin-bottom: 9px;
+    }
+
+    #content li p {
+     margin-left: 0;
+     margin-right: 0;
+    }
+
+    #content .tableborder {
+     border: 1px solid #999;
+    }
+    #content th {
+     font-weight: bold;
+     text-align: left;
+     font-size: 12px;
+     background-color: #666;
+     color: #fff;
+     padding: 4px;
+    }
+
+    #content .td {
+     font-weight: normal;
+     font-size: 12px;
+     padding: 6px;
+     background-color: #f3f3f3;
+    }
+
+    #content .tdpackage {
+     font-weight: normal;
+     font-size: 12px;
+    }
+
+    #content .important {
+     background: #FBE6F2;
+     border: 1px solid #D893A1;
+     color: #333;
+     margin: 10px 0 5px 0;
+     padding: 10px;
+    }
+
+    #content .important p {
+     margin: 6px 0 8px 0;
+     padding: 0;
+    }
+
+    #content .important .leftpad {
+     margin: 6px 0 8px 0;
+     padding-left: 20px;
+    }
+
+    #content .critical {
+     background: #FBE6F2;
+     border: 1px solid #E68F8F;
+     color: #333;
+     margin: 10px 0 5px 0;
+     padding: 10px;
+    }
+
+    #content .critical p {
+     margin: 5px 0 6px 0;
+     padding: 0;
+    }
+
+
+    #footer {
+    background-color: transparent;
+    font-size: 10px;
+    padding: 16px 0 15px 0;
+    margin: 20px 0 0 0;
+    text-align: center;
+    }
+
+    #footer p {
+     font-size: 10px;
+     color: #999;
+     text-align: center;
+    }
+    #footer address {
+     font-style: normal;
+    }
+
+    .center {
+     text-align: center;
+    }
+
+    img {
+     padding:0;
+     border: 0;
+     margin: 0;
+    }
+
+    .nopad {
+     padding:0;
+     border: 0;
+     margin: 0;
+    }
+
+
+    form {
+     margin: 0;
+     padding: 0;
+    }
+
+    .input {
+     font-family: Lucida Grande, Verdana, Geneva, Sans-serif;
+     font-size: 11px;
+     color: #333;
+     border: 1px solid #B3B4BD;
+     width: 100%;
+     font-size: 11px;
+     height: 1.5em;
+     padding: 0;
+     margin: 0;
+    }
+
+    .textarea {
+     font-family: Lucida Grande, Verdana, Geneva, Sans-serif;
+     font-size: 14px;
+     color: #143270;
+     background-color: #f9f9f9;
+     border: 1px solid #B3B4BD;
+     width: 100%;
+     padding: 6px;
+     margin: 0;
+    }
+
+    .select {
+     background-color: #fff;
+     font-size:  11px;
+     font-weight: normal;
+     color: #333;
+     padding: 0;
+     margin: 0 0 3px 0;
+    }
+
+    .checkbox {
+     background-color: transparent;
+     padding: 0;
+     border: 0;
+    }
+
+    .submit {
+     background-color: #000;
+     color: #fff;
+     font-weight: normal;
+     font-size: 10px;
+     border: 1px solid #fff;
+     margin: 0;
+     padding: 1px 5px 2px 5px;
+    }
+</style>
+
+</head>
+<body>
+
+
+
+
+<br clear="all" />
+
+
+<!-- START CONTENT -->
+<div id="content">
+
+
+<h1>Simple News Class for CodeIgniter 2.X</h1>
+<p>The Simple News class is a small class with a clear function: Manage news in an easy way with CodeIgniter 2.X for your blog or web.</p>
+<h2>Requisites</h2>
+<p>You will need:
+<ul>
+  <li>Table on your database: Just run this SQL into mySQL and config CodeIgniter for it:
+        <code>CREATE TABLE IF NOT EXISTS `news` (
+              `id` int(11) NOT NULL AUTO_INCREMENT,
+              `title` varchar(128) NOT NULL,
+              `url` varchar(128) NOT NULL,
+              `body` text NOT NULL,
+              `tags` varchar(128) NOT NULL,
+              PRIMARY KEY (`id`),
+              KEY `url` (`url`)
+            ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;</code></li>
+    <li>Preload the database library and url helper:
+    <code>$this->load->database();<br />
+           $this->load->helper('url');</code></li>
+</ul>     
+</p>
+
+<h2>Optional</h2>
+<p>You can personalize this library for:
+<ul>
+    <li>Set a URL path to your contoler when you click on a News Title:
+    <code>$this->simplenews->set_url_path('News/'); // Set path for news > yourdomain.com/My-title-1 to yourdomain.com/News/My-title-1</code></li>
+    <li>Field's table: If the table exists, you can change the fields as you have in the database:
+    <code>
+    private $title_field = 'your_title_field_in_database';<br />
+    private $url_field = 'your_url_field_in_database';<br />
+    private $body_field = 'your_body_field_in_database';<br />
+    private $tags_field = 'your_tags_field_in_database';<br />
+    </code></li>
+</ul>     
+</p>
+
+<h2>Install this library</h2>
+<p>Just copy the root <i>'application'</i> folder into your project.</p>
+
+<h2>Load this library</h2>
+<p>The first step is load the library. It's an easy step:</p>
+<code>$this->load->library('Simplenews');</code>
+<p>After this, you can use the next methods.</p>
+
+<h2>Create a news</h2>
+<p>Allow you to create a news in the system.</p>
+<code>$this->simplenews->add('My title 3', 'This is my news3!', 'cars,hobby');</code>
+<p>The parameters are: Title news, body news and tags news (separated by comma).</p>
+<p>Returns a boolean as result.</p>
+
+<h2>Total number of news in your database</h2>
+<p>Count the number of news.</p>
+<code>$this->simplenews->get_total_news();</code>
+<p>Use this for set a <a href="http://ellislab.com/codeigniter/user-guide/libraries/pagination.html">pagination</a>.</p>
+<p>Returns an integer.</p>
+
+<h2>Generate HTML (by offset or tag)</h2>
+<p>Get the news for show in your view.</p>
+<code>$data = array('limit'=>10, 'tag'=>'favourite', 'show_tags'=>TRUE);<br />
+$this->simplenews->generate($data);<br />
+<br />
+$data = array('limit'=>10, 'offset'=>2, 'show_tags'=>FALSE);<br />
+$this->simplenews->generate($data);<br />
+</code>
+<p>The parameters (set with an array) are:</p>
+<ul>
+<li>limit: How many news you want.</li>
+<li>offset (optional): Get news from an offset in database. Example: Get 2 news from the 3th: Limit=2, offset=2 (starts in 0).</li>
+<li>tag (optional): Get news from a specific tag. Use just one tag.</li>
+<li>show_tags (optional): False by default. Show the news tag or not.</li>
+</ul>
+You have to set the limit.<br />
+You have to set offset or tag.<br />
+You can set optionally show the tags.<br />
+<p>Returns a string (HTML format).</p>
+
+<h2>Generate HTML (by title)</h2>
+<p>Get the news by URL title or title.</p>
+<code>$this->simplenews->generate('My-title-1');<br /><br />
+$this->simplenews->generate('My title 1');
+</code>
+<p>The parameters is the URL in URI format.</p>
+<p>Use this for a click on a News title.</p>
+<p>Returns a string (HTML format).</p>
+
+<h2>Set a template for the HTML</h2>
+<p>You should set a template.</p>
+<code>
+$data_tmpl = array('open'=&gt;'&lt;span&gt;',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'title_start'=&gt;'&lt;h1&gt;',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'title_end'=&gt;'&lt;/h1&gt;',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'body_start'=&gt;'&lt;p&gt;',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'body_end'=&gt;'&lt;/p&gt;',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'all_tags_start'=&gt;'&gt;&gt;',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'tag_end'=&gt;'&lt;/span&gt;',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'tag_start'=&gt;'&lt;span&gt;',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'all_tags_end'=&gt;'&lt;&lt;',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'close'=&gt;'&lt;span&gt;',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'set_title_links'=&gt;TRUE);<br />
+$this->simplenews->set_template($data_tmpl);<br /><br />
+$data = array('limit'=>10, 'offset'=>2, 'show_tags'=>FALSE);<br />
+$this->simplenews->generate($data);<br />    
+</code>
+
+<h2>Clear the current template</h2>
+<p>You can unset the current template.</p>
+<code>$this->simplenews->clear_template();</code>
+
+<h2>Delete a news (by title)</h2>
+<p>You can remove a news by URL title or title string.</p>
+<code>$this->simplenews->delete('My title 1');<br /><br />
+$this->simplenews->delete('My-title-1');</code>
+
+
+<h2>A real example</h2>
+<p>After install this library, you can create a controller with this code and run on your browser:</p>
+<code>
+&lt;?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');<br />
+<br />
+class News extends CI_Controller {<br />
+ <br />
+&nbsp;&nbsp;&nbsp;&nbsp;function __construct() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent::__construct();<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this-&gt;load-&gt;database();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this-&gt;load-&gt;helper('url');<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this-&gt;load-&gt;library('Simplenews');<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;public function index() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Set path for news &gt; yourdomain.com/My-title-1 to yourdomain.com/News/My-title-1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this-&gt;simplenews-&gt;set_url_path('News/');<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Create a news<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($this-&gt;simplenews-&gt;add('My title 1', 'This is my news1!', 'english'))<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Creating news 1... OK&lt;br /&gt;";<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Creating news 1... NO OK&lt;br /&gt;";<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Create a news<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($this-&gt;simplenews-&gt;add('My title 2', 'This is my news2!', 'favourite'))<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Creating news 2... OK&lt;br /&gt;";<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Creating news 2... NO OK&lt;br /&gt;";<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Create a news<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($this-&gt;simplenews-&gt;add('My title 3', 'This is my news3!', 'cars'))<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Creating news 3... OK";<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Creating news 3... NO OK";<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lt;hr&gt;";<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Count news<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Total News: ".$this-&gt;simplenews-&gt;get_total_news();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lt;hr&gt;";<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Generating by tag<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$data = array('limit'=&gt;10, 'tag'=&gt;'favourite', 'show_tags'=&gt;TRUE);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Generating news without template with tag = favourite:&lt;br /&gt;";<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo $this-&gt;simplenews-&gt;generate($data);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lt;hr&gt;";<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Generating with template<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$data_tmpl = array('open'=&gt;'&lt;span&gt;Starting news...&lt;/span&gt;&lt;br /&gt;',<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   'title_start'=&gt;'&lt;h1&gt;',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   'title_end'=&gt;'&lt;/h1&gt;',<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   'body_start'=&gt;'&lt;p&gt;',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   'body_end'=&gt;'&lt;/p&gt;',<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   'all_tags_start'=&gt;'&gt;&gt;',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   'tag_end'=&gt;'&lt;/span&gt;',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   'tag_start'=&gt;'&lt;span&gt;',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   'all_tags_end'=&gt;'&lt;&lt;',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   'close'=&gt;'&lt;br /&gt;&lt;span&gt;End news&lt;/span&gt;&lt;br /&gt;',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   'set_title_links'=&gt;TRUE);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this-&gt;simplenews-&gt;set_template($data_tmpl);&nbsp;&nbsp;&nbsp;&nbsp;   <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Generating news with template with offset = 2, limit = 10:&lt;br /&gt;";<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$data = array('limit'=&gt;10, 'offset'=&gt;2, 'show_tags'=&gt;FALSE);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo $this-&gt;simplenews-&gt;generate($data);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lt;hr&gt;";&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Generating news from title:&lt;br /&gt;";<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo $this-&gt;simplenews-&gt;generate_from_title('My-title-3');<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lt;hr&gt;"; <br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this-&gt;simplenews-&gt;clear_template();&nbsp;&nbsp;&nbsp;&nbsp;   <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Generating news without template (after clear_template) with offset = 2, limit = 10:&lt;br /&gt;";<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo $this-&gt;simplenews-&gt;generate($data);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lt;hr&gt;";<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Delete a news<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($this-&gt;simplenews-&gt;delete('My title 1'))<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Deleting news1... OK&lt;br /&gt;";<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Deleting news2... NO OK&lt;br /&gt;";<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Delete a news<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($this-&gt;simplenews-&gt;delete('My title 2'))<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Deleting news2... OK&lt;br /&gt;";<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Deleting news2... NO OK&lt;br /&gt;";<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Delete a news<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($this-&gt;simplenews-&gt;delete('My title 3'))<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Deleting news3... OK&lt;br /&gt;";<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Deleting news3... NO OK&lt;br /&gt;";<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}<br />
+
+?&gt;
+</code>
+<p>The exit will be:</p>
+<code>
+Creating news 1... OK<br />
+Creating news 2... OK<br />
+Creating news 3... OK<br /><br />
+Total News: 3<br /><br />
+Generating news without template with tag = favourite:<br />
+My title 2This is my news2!favourite<br /><br />
+Generating news with template with offset = 2, limit = 10:<br />
+Starting news...<br />
+My title 3<br />
+<br />
+This is my news3!<br />
+<br />
+End news<br /><br />
+Generating news from title:<br />
+Starting news...<br />
+My title 3<br />
+<br />
+This is my news3!<br />
+<br />
+End news<br /><br />
+Generating news without template (after clear_template) with offset = 2, limit = 10:<br />
+My title 3This is my news3!<br /><br />
+Deleting news1... OK<br />
+Deleting news2... OK<br />
+Deleting news3... OK</code>
+<!-- END CONTENT -->
+
+
+<div id="footer">
+<p><a href="https://code.launchpad.net/simplenewscodeigniter">Code</a> | <a href="https://bugs.launchpad.net/simplenewscodeigniter">Bugs</a> | <a href="https://answers.launchpad.net/simplenewscodeigniter">Answers</a></p>
+<p>Library <a href="https://launchpad.net/simplenewscodeigniter">Simple News</a> by <a href="https://launchpad.net/~costales">costales</a>.</p>
+<p>Licensed under <a href="http://www.gnu.org/licenses/lgpl.html">LGPL3</a></p>
+<p><a href="http://codeigniter.com">Download CodeIgniter</a> by <a href="http://ellislab.com/">EllisLab, Inc.</a></p>
+</div>
+
+</body>
+</html>

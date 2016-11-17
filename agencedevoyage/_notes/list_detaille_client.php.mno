@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_affichageclient" value="name:code_cl;datatype:int,name:nom_cl;datatype:string,name:prenom_cl;datatype:string,name:date_nais_cl;datatype:date,name:num_tel_cl;datatype:int,name:e_mail_cl;datatype:string,name:adr_cl;datatype:string" />
+</info>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_affichage2" value="name:nom_cl;datatype:string,name:prenom_cl;datatype:string,name:date_nais_cl;datatype:date,name:num_tel_cl;datatype:int,name:e_mail_cl;datatype:string,name:adr_cl;datatype:string" />
+	<infoitem key="UD_affichage1" value="name:nom_cl;datatype:string,name:prenom_cl;datatype:string,name:date_nais_cl;datatype:date,name:num_tel_cl;datatype:int,name:e_mail_cl;datatype:string,name:adr_cl;datatype:string" />
+	<infoitem key="UD_liste_client" value="name:code_cl;datatype:int,name:nom_cl;datatype:string,name:prenom_cl;datatype:string,name:date_nais_cl;datatype:date,name:num_tel_cl;datatype:int,name:adr_cl;datatype:string,name:e_mail_cl;datatype:string,name:password;datatype:string" />
+</info>

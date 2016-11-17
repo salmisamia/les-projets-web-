@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_LiveData_params" value="1" />
+	<infoitem key="UD_LiveData_param0" value="recordID=1" />
+	<infoitem key="UD_DetailRS1" value="name:id_message;datatype:int,name:nom;datatype:string,name:prenom;datatype:string,name:e_mail;datatype:string,name:objet;datatype:string,name:message;datatype:string" />
+</info>

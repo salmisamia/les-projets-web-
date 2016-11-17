@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_affvol" value="name:id_vol;datatype:int,name:ville_depart_vol;datatype:string,name:ville_arrivee_vol;datatype:string,name:date_depart_vol;datatype:date,name:heure_depart_vol;datatype:string,name:date_retour_vol;datatype:date,name:heure_retour_vol;datatype:string,name:classe_vol;datatype:string,name:type_vol;datatype:string,name:compagnie;datatype:string,name:prix_vol;datatype:real" />
+</info>

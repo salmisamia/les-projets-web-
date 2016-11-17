@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_affichcrois" value="name:id_croisiere;datatype:int,name:ville_depart_croisiere;datatype:string,name:ville_arrivee_croisiere;datatype:string,name:date_depart_croisiere;datatype:date,name:date_retour_croisiere;datatype:date,name:heure_depart_croisiere;datatype:time,name:heure_retour_croisiere;datatype:time,name:compagnie;datatype:string,name:nb_plass_croisiere;datatype:int,name:prix_croisiere;datatype:real" />
+</info>

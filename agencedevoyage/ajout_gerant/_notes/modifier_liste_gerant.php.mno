@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_modfgerant" value="name:id_gerant;datatype:int,name:nom_gerant;datatype:string,name:prenom_gerant;datatype:string,name:date_nais_gerant;datatype:date,name:num_tel_gerant;datatype:int,name:login;datatype:string,name:password;datatype:string" />
+	<infoitem key="UD_modifier" value="name:id_gerant;datatype:int,name:nom_gerant;datatype:string,name:prenom_gerant;datatype:string,name:date_nais_gerant;datatype:date,name:num_tel_gerant;datatype:int" />
+	<infoitem key="UD_modifiegerant" value="name:id_gerant;datatype:int,name:nom_gerant;datatype:string,name:prenom_gerant;datatype:string,name:date_nais_gerant;datatype:date,name:num_tel_gerant;datatype:int,name:login;datatype:string,name:password;datatype:string" />
+</info>

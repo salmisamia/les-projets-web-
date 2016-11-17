@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_list_mess" value="name:id_message;datatype:int,name:nom;datatype:string,name:prenom;datatype:string,name:e_mail;datatype:string,name:objet;datatype:string,name:message;datatype:string" />
+	<infoitem key="UD_liste_det" value="name:id_message;datatype:int,name:nom;datatype:string,name:prenom;datatype:string,name:e_mail;datatype:string,name:objet;datatype:string,name:message;datatype:string" />
+</info>

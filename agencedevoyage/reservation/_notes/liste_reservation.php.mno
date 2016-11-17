@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_liste_res1" value="name:Id_res;datatype:int,name:code_cl;datatype:int,name:Id_vol;datatype:int,name:Id_croisiere;datatype:int,name:Date_res;datatype:date,name:ville_depart;datatype:string,name:ville_arrivee;datatype:string,name:date_depart;datatype:date,name:nb_place;datatype:int" />
+</info>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="fl_replacelink_old_1" value="ajoute_vol.php" />
+	<infoitem key="fl_replacelink_new_1" value="vol/ajoute_vol.php" />
+	<infoitem key="fl_replacelink_old_2" value="ajoute_vol.php" />
+	<infoitem key="fl_replacelink_new_2" value="vol/ajoute_vol.php" />
+	<infoitem key="fl_replacelink_count" value="2" />
+</info>
